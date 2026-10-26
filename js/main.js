@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriterElement = document.getElementById('typewriter');
   if (typewriterElement) {
     const roles = [
-      'Full Stack Engineer',
-      'Cloud & Systems Architect',
-      'AI Applications Developer',
-      'Modern UI/UX Craftsman',
+      'ML Engineer & AI Developer',
+      'Autonomous Systems Student',
+      'Python Backend & API Architect',
+      'RAG & LLM Pipeline Crafter',
     ];
 
     let roleIndex = 0;
@@ -245,40 +245,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalLiveLink = document.getElementById('modal-live-link');
   const modalCodeLink = document.getElementById('modal-code-link');
 
-  // Rich project dataset
+  // Rich project dataset tailored to Mrudul's engineering portfolio
   const projectDetailsData = {
     'ai-workspace': {
-      title: 'AuraFlow - Autonomous Multi-Agent AI Platform',
-      badge: 'AI & Automation',
+      title: 'Document Q&A with Retrieval-Augmented Generation (RAG)',
+      badge: 'AI & LLM Pipeline',
       img: 'assets/images/project-ai-workspace.jpg',
-      desc: 'An enterprise-grade node-based visual workflow automation suite integrating LLM agents, semantic document search, and webhook orchestration. Allows engineering teams to construct intelligent autonomous pipelines in minutes without writing repetitive glue code.',
-      architecture: 'Engineered with React Flow on the frontend with custom canvas shaders, backed by a FastAPI asynchronous Python pipeline. Implemented Redis message queuing and Milvus vector indexing for sub-50ms semantic agent response times.',
-      metrics: ['14+ Active Concurrent Pipelines', 'Sub-1.2s Average Execution Time', 'Zero-downtime microservice architecture', '99.9% Pipeline Reliability'],
-      tags: ['Python', 'FastAPI', 'React', 'Vector DB', 'Redis', 'Docker', 'WebSockets'],
-      liveUrl: 'https://auraflow.io',
-      codeUrl: 'https://github.com/mrudul/auraflow-ai-workspace',
+      desc: 'An end-to-end Retrieval-Augmented Generation system allowing users to upload unstructured technical PDFs and ask natural language questions with contextual source citations and zero hallucination.',
+      architecture: 'Engineered with LangChain and FAISS for sub-100ms vector embeddings retrieval. Uses an asynchronous FastAPI Python backend with smart token chunking strategies and OpenAI / local open-weights LLM inference.',
+      metrics: ['Sub-100ms FAISS Vector Similarity Retrieval', 'Context-accurate answers with source page citations', 'Handles multi-megabyte complex PDF parsing', 'Containerized Docker deployment'],
+      tags: ['Python', 'LangChain', 'FAISS', 'FastAPI', 'PyTorch', 'Docker'],
+      liveUrl: 'https://github.com/mrudul-999',
+      codeUrl: 'https://github.com/mrudul-999',
     },
     'cloud-telemetry': {
-      title: 'Aurora - Cloud Telemetry & Observability Engine',
-      badge: 'Cloud & Systems',
+      title: 'Predictive Maintenance ML Pipeline (NASA CMAPSS)',
+      badge: 'ML & Predictive Modeling',
       img: 'assets/images/project-cloud.jpg',
-      desc: 'A full-stack distributed system monitoring dashboard visualizing high-throughput server metrics, container health, query performance, and active incident mitigation across multi-region cloud clusters.',
-      architecture: 'Constructed using Go microservices and React for real-time visualization. Uses gRPC streaming and Prometheus telemetry scrapers to aggregate millions of system events per second with sub-second dashboard rendering.',
-      metrics: ['145+ Active Node Clusters Monitored', '95ms Global P99 API Response', 'Real-time alert dispatch via Webhooks', 'Automated horizontal auto-scaling'],
-      tags: ['Go / Golang', 'React', 'Docker', 'Prometheus', 'Grafana API', 'gRPC', 'Tailwind'],
-      liveUrl: 'https://auroracloud.com',
-      codeUrl: 'https://github.com/mrudul/aurora-cloud-telemetry',
+      desc: 'An industrial Machine Learning pipeline built on the NASA CMAPSS turbofan degradation dataset to accurately forecast Remaining Useful Life (RUL) of aircraft jet engines.',
+      architecture: 'Trained and benchmarked Random Forest, XGBoost, and LSTM recurrent neural networks using PyTorch. Integrated MLflow for automated hyperparameter tuning and model experiment registry.',
+      metrics: ['Validated on NASA CMAPSS Turbofan Engine dataset', 'Tracked & logged 50+ runs via MLflow', 'Lowered RMSE prediction error across test degradation curves', 'Automated feature engineering pipeline'],
+      tags: ['Python', 'PyTorch', 'XGBoost', 'MLflow', 'Scikit-Learn', 'Pandas'],
+      liveUrl: 'https://github.com/mrudul-999',
+      codeUrl: 'https://github.com/mrudul-999',
     },
     'fintech-platform': {
-      title: 'Astra - High-Frequency Asset Analytics Suite',
-      badge: 'FinTech & Web App',
+      title: 'Async European Weather Data Pipeline & Service',
+      badge: 'Data Engineering & APIs',
       img: 'assets/images/project-fintech.jpg',
-      desc: 'A next-generation wealth management and real-time algorithmic portfolio analyzer. Provides deep asset allocation breakdowns, automated rebalancing triggers, and instantaneous exchange rate telemetry.',
-      architecture: 'Powered by Next.js, TypeScript, and Rust WebAssembly calculation cores for client-side zero-latency portfolio simulations. Integrates WebSocket market streams with local IndexedDB caching.',
-      metrics: ['$214k+ Simulated Portfolio Value', '60 FPS Canvas Chart Rendering', 'Client-side encrypted local credentials', 'Zero third-party telemetry leaks'],
-      tags: ['TypeScript', 'Next.js', 'Rust / Wasm', 'Node.js', 'WebSockets', 'Tailwind', 'PostgreSQL'],
-      liveUrl: 'https://astrafinance.io',
-      codeUrl: 'https://github.com/mrudul/astra-fintech-suite',
+      desc: 'High-throughput asynchronous Python pipeline continuously ingesting hourly meteorological observations across 15 European cities with automated statistical anomaly detection.',
+      architecture: 'Built using Python asyncio, SQLAlchemy ORM, and FastAPI with automated background scheduler jobs. Comprehensive automated unit and integration tests written in pytest.',
+      metrics: ['92% Test Coverage via pytest', 'Asynchronous non-blocking HTTP requests for 15 cities', 'Automated anomaly detection flagging temperature spikes', 'Zero-downtime REST query API'],
+      tags: ['Python', 'asyncio', 'FastAPI', 'SQLAlchemy', 'pytest', 'SQLite/PostgreSQL'],
+      liveUrl: 'https://github.com/mrudul-999',
+      codeUrl: 'https://github.com/mrudul-999',
     },
     'devops-suite': {
       title: 'KubeFlow - Kubernetes Cluster Management Console',
@@ -288,8 +288,8 @@ document.addEventListener('DOMContentLoaded', () => {
       architecture: 'Direct integration with Kubernetes API via custom operator in Go. The web client utilizes lightweight WebSockets for interactive remote terminal access and instantaneous pod health diagnostics.',
       metrics: ['195 Running Pods Orchestrated', 'Instantaneous Canary Rollback in <2s', 'Integrated RBAC access control', 'Multi-cluster federation support'],
       tags: ['Kubernetes', 'Go', 'Docker', 'React', 'Linux CLI', 'CI/CD Pipelines'],
-      liveUrl: 'https://kubeflow-console.dev',
-      codeUrl: 'https://github.com/mrudul/kubeflow-console',
+      liveUrl: 'https://github.com/mrudul-999',
+      codeUrl: 'https://github.com/mrudul-999',
     },
   };
 

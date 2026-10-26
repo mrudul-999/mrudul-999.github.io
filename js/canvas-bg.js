@@ -1,6 +1,6 @@
 /**
- * Interactive Particle & Glow Constellation Background
- * Lightweight, high-performance HTML5 Canvas animation
+ * Atomic Engineering Background
+ * Lightweight, high-performance ambient particle canvas (No AI constellation lines)
  */
 (function () {
   const canvas = document.getElementById('bg-canvas');
@@ -13,14 +13,12 @@
   let mouse = {
     x: null,
     y: null,
-    radius: 120,
+    radius: 100,
   };
 
-  const isTouch = 'ontouchstart' in window;
-  const particleCount = window.innerWidth < 768 ? 35 : 70;
+  const particleCount = window.innerWidth < 768 ? 30 : 60;
   const particles = [];
 
-  // Track mouse/touch
   window.addEventListener('mousemove', (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
@@ -36,39 +34,40 @@
     height = canvas.height = window.innerHeight;
   });
 
-  // Particle Class
   class Particle {
     constructor() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      this.size = Math.random() * 2 + 1;
+      this.size = Math.random() * 1.5 + 0.8;
       this.baseX = this.x;
       this.baseY = this.y;
-      this.speedX = (Math.random() - 0.5) * 0.8;
-      this.speedY = (Math.random() - 0.5) * 0.8;
-      this.density = Math.random() * 20 + 5;
-      this.hue = Math.random() > 0.5 ? 260 : 190; // Violet or Cyan
+      this.speedX = (Math.random() - 0.5) * 0.4;
+      this.speedY = (Math.random() - 0.5) * 0.4;
+      this.density = Math.random() * 15 + 4;
+      this.opacity = Math.random() * 0.35 + 0.15;
+      // Atomic cyan or crisp cool white
+      this.isCyan = Math.random() > 0.4;
     }
 
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = `hsla(${this.hue}, 85%, 65%, 0.7)`;
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = `hsla(${this.hue}, 90%, 60%, 0.8)`;
+      ctx.fillStyle = this.isCyan
+        ? `rgba(56, 189, 248, ${this.opacity})`
+        : `rgba(240, 246, 252, ${this.opacity})`;
       ctx.fill();
     }
 
     update() {
-      // Free drift
       this.x += this.speedX;
       this.y += this.speedY;
 
-      // Bounce at boundaries
-      if (this.x < 0 || this.x > width) this.speedX *= -1;
-      if (this.y < 0 || this.y > height) this.speedY *= -1;
+      if (this.x < 0) this.x = width;
+      if (this.x > width) this.x = 0;
+      if (this.y < 0) this.y = height;
+      if (this.y > height) this.y = 0;
 
-      // Mouse interactivity
+      // Subtle mouse repulsion
       if (mouse.x !== null && mouse.y !== null) {
         let dx = mouse.x - this.x;
         let dy = mouse.y - this.y;
@@ -82,41 +81,17 @@
           const directionX = forceDirectionX * force * this.density;
           const directionY = forceDirectionY * force * this.density;
 
-          this.x -= directionX * 0.5;
-          this.y -= directionY * 0.5;
+          this.x -= directionX * 0.3;
+          this.y -= directionY * 0.3;
         }
       }
     }
   }
 
-  // Populate particles
   for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
   }
 
-  // Connect particles with faint glowing lines
-  function connect() {
-    const maxDist = 130;
-    for (let a = 0; a < particles.length; a++) {
-      for (let b = a + 1; b < particles.length; b++) {
-        let dx = particles[a].x - particles[b].x;
-        let dy = particles[a].y - particles[b].y;
-        let dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < maxDist) {
-          let opacity = (1 - dist / maxDist) * 0.25;
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`;
-          ctx.lineWidth = 1;
-          ctx.moveTo(particles[a].x, particles[a].y);
-          ctx.lineTo(particles[b].x, particles[b].y);
-          ctx.stroke();
-        }
-      }
-    }
-  }
-
-  // Animation Loop with visibility handling
   let isRunning = true;
   document.addEventListener('visibilitychange', () => {
     isRunning = !document.hidden;
@@ -131,7 +106,6 @@
       particles[i].update();
       particles[i].draw();
     }
-    connect();
 
     requestAnimationFrame(animate);
   }

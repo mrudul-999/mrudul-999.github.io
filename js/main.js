@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const typewriterElement = document.getElementById('typewriter');
   if (typewriterElement) {
     const roles = [
-      'ML Engineer & AI Developer',
-      'Autonomous Systems Student',
-      'Python Backend & API Architect',
-      'RAG & LLM Pipeline Crafter',
+      'Software Engineer',
+      'Migration & Integration Specialist',
+      'Python & Cloud Architect',
+      'GenAI & LLM Pipeline Crafter',
     ];
 
     let roleIndex = 0;

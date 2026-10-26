@@ -247,47 +247,163 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Rich project dataset tailored to Mrudul's engineering portfolio
   const projectDetailsData = {
-    'ai-workspace': {
-      title: 'Document Q&A with Retrieval-Augmented Generation (RAG)',
-      badge: 'AI & LLM Pipeline',
-      img: 'assets/images/project-ai-workspace.jpg',
-      desc: 'An end-to-end Retrieval-Augmented Generation system allowing users to upload unstructured technical PDFs and ask natural language questions with contextual source citations and zero hallucination.',
-      architecture: 'Engineered with LangChain and FAISS for sub-100ms vector embeddings retrieval. Uses an asynchronous FastAPI Python backend with smart token chunking strategies and OpenAI / local open-weights LLM inference.',
-      metrics: ['Sub-100ms FAISS Vector Similarity Retrieval', 'Context-accurate answers with source page citations', 'Handles multi-megabyte complex PDF parsing', 'Containerized Docker deployment'],
-      tags: ['Python', 'LangChain', 'FAISS', 'FastAPI', 'PyTorch', 'Docker'],
+    'rag-system': {
+      title: 'Production Grade Advanced RAG',
+      badge: 'Agentic AI & Retrieval',
+      img: 'assets/images/project-rag.jpg',
+      desc: 'An enterprise agentic RAG architecture utilizing an LLM-driven Query Router to classify user intent, dynamic tool routing, parallel Fusion Retrieval across transformed queries, and Cross-Encoder reranking.',
+      architecture: 'Engineered with LangChain, FAISS vector indexing, and sentence-transformers, served via FastAPI with a Gradio frontend. Integrates query transformation and Cross-Encoder (ms-marco-MiniLM-L-6-v2) reranking post-processing to minimize hallucinations.',
+      metrics: [
+        'Agentic query router dynamically selecting optimal tool choice',
+        'Query Transformation & Fusion parallel multi-query search',
+        'Cross-Encoder reranking post-processing (ms-marco-MiniLM)',
+        'Unified prompt injection minimizing hallucinations and boosting answer depth'
+      ],
+      tags: ['Python', 'LangChain', 'FAISS', 'sentence-transformers', 'FastAPI', 'Gradio'],
       liveUrl: 'https://github.com/mrudul-999',
       codeUrl: 'https://github.com/mrudul-999',
     },
-    'cloud-telemetry': {
-      title: 'Predictive Maintenance ML Pipeline (NASA CMAPSS)',
+    'synapse-ai': {
+      title: 'Synapse Multi-Agentic AI',
+      badge: 'LangGraph & Multi-Agent',
+      img: 'assets/images/project-synapse.jpg',
+      desc: 'A hierarchical multi-agent research system using LangGraph to orchestrate a planner, tool-execution, and debate-based verification pipeline with explicit state machines.',
+      architecture: 'Designed with a self-critiquing verification loop where independent "steelman" and "skeptic" agents argue opposing sides of claims before judge adjudication. External tools integrated via Model Context Protocol (MCP) as swappable servers.',
+      metrics: [
+        '40% reduction in unsupported claims vs single-verifier baseline',
+        'Model Context Protocol (MCP) integration for dynamic tool selection',
+        'Explicit state machine supporting conditional retries and replanning',
+        'FastAPI backend with reactive HTMX single-page interface'
+      ],
+      tags: ['LangGraph', 'Python', 'MCP', 'Vector DB', 'FastAPI', 'HTMX', 'Gemini API'],
+      liveUrl: 'https://github.com/mrudul-999',
+      codeUrl: 'https://github.com/mrudul-999',
+    },
+    'predictive-ml': {
+      title: 'Predictive Maintenance ML Pipeline',
       badge: 'ML & Predictive Modeling',
-      img: 'assets/images/project-cloud.jpg',
-      desc: 'An industrial Machine Learning pipeline built on the NASA CMAPSS turbofan degradation dataset to accurately forecast Remaining Useful Life (RUL) of aircraft jet engines.',
-      architecture: 'Trained and benchmarked Random Forest, XGBoost, and LSTM recurrent neural networks using PyTorch. Integrated MLflow for automated hyperparameter tuning and model experiment registry.',
-      metrics: ['Validated on NASA CMAPSS Turbofan Engine dataset', 'Tracked & logged 50+ runs via MLflow', 'Lowered RMSE prediction error across test degradation curves', 'Automated feature engineering pipeline'],
-      tags: ['Python', 'PyTorch', 'XGBoost', 'MLflow', 'Scikit-Learn', 'Pandas'],
+      img: 'assets/images/project-predictive-ml.jpg',
+      desc: 'A modular, production-ready predictive maintenance pipeline in Python to estimate the Remaining Useful Life (RUL) of aircraft turbofan engines using the NASA CMAPSS dataset.',
+      architecture: 'Engineered 15+ rolling-window temporal features with a piecewise linear target profile. Trained Random Forest, XGBoost, and PyTorch LSTM models tracked via MLflow. Served via low-latency FastAPI with Pydantic validation schemas.',
+      metrics: [
+        '18.4 cycles validation RMSE (41% improvement over baseline)',
+        '15+ rolling-window temporal lag features (mean, std dev, lag)',
+        'MLflow experiment tracking for hyperparameters and feature importances',
+        'Real-time low-latency FastAPI inference endpoint with Pydantic validation'
+      ],
+      tags: ['Python', 'scikit-learn', 'XGBoost', 'PyTorch', 'MLflow', 'FastAPI'],
+      liveUrl: 'https://github.com/mrudul-999/PredictiveMLPipeline',
+      codeUrl: 'https://github.com/mrudul-999/PredictiveMLPipeline',
+    },
+    'ai-interview': {
+      title: 'AI Interview Coach',
+      badge: 'Full Stack & LLM',
+      img: 'assets/images/project-interview.jpg',
+      desc: 'A containerized full-stack web application using Django and PostgreSQL via Docker Compose, evaluating user responses with real-time dynamic questions and evaluation scoring.',
+      architecture: 'Engineered an isolated Service Layer in Django to decouple Google Gemini API prompt orchestration from controllers. Designed a reactive SPA utilizing HTMX for declarative AJAX swapping of server-rendered HTML fragments.',
+      metrics: [
+        'Reactive SPA utilizing HTMX with zero heavy JS framework overhead',
+        'Isolated Service Layer pattern decoupling Gemini API orchestration',
+        'Normalized schema tracking session histories and evaluation scores',
+        'Multi-container Docker Compose architecture with PostgreSQL'
+      ],
+      tags: ['Python', 'Django', 'PostgreSQL', 'Docker', 'HTMX', 'Gemini API'],
+      liveUrl: 'https://github.com/mrudul-999/AI-Interview-Coach',
+      codeUrl: 'https://github.com/mrudul-999/AI-Interview-Coach',
+    },
+    'job-pulse': {
+      title: 'Real-Time Job Market Intelligence Pipeline',
+      badge: 'Data Engineering & Analytics',
+      img: 'assets/images/project-jobpulse.jpg',
+      desc: 'A continuous Python data pipeline ingesting job postings from the ArbeitNow API, normalizing descriptions against a tech-skill checklist, and serving market density analytics.',
+      architecture: 'Built in Python with raw JSONB archival in PostgreSQL for data reproducibility. Developed a FastAPI backend and SQLAlchemy many-to-many schema mapping jobs and skills with indexed search fields.',
+      metrics: [
+        'Continuous pipeline ingesting and archiving ArbeitNow API postings',
+        'PostgreSQL JSONB archival for full data reproducibility',
+        'Normalized skill-matching engine (Python, Kubernetes, AWS)',
+        'Docker & Docker Compose containerized deployment'
+      ],
+      tags: ['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'SQLAlchemy', 'ArbeitNow API'],
+      liveUrl: 'https://github.com/mrudul-999/JobPulse-Real-Time-Job-Market-Intelligence-Pipeline',
+      codeUrl: 'https://github.com/mrudul-999/JobPulse-Real-Time-Job-Market-Intelligence-Pipeline',
+    },
+    'sign-language': {
+      title: 'Indian Sign Language Recognition',
+      badge: 'Computer Vision & Deep Learning',
+      img: 'assets/images/project-sign-language.jpg',
+      desc: 'A deep learning computer vision system extending static hand gesture recognition into real-time continuous sign-to-text sentence translation.',
+      architecture: 'Created a custom dataset spanning 35 classes (26 letters, 9 numbers) with noise injection and data augmentation. Designed and trained a CNN from scratch, deploying via a Flask web app with real-time OpenCV webcam inference.',
+      metrics: [
+        '97% accuracy on multi-class hand sign recognition',
+        'Custom dataset spanning 35 classes (26 letters, 9 numbers)',
+        'Extended static recognition into continuous real-time sentence formation',
+        'Flask web application delivering live webcam-based inference'
+      ],
+      tags: ['Python', 'TensorFlow/Keras', 'CNN', 'OpenCV', 'Flask'],
       liveUrl: 'https://github.com/mrudul-999',
       codeUrl: 'https://github.com/mrudul-999',
     },
-    'fintech-platform': {
-      title: 'Async European Weather Data Pipeline & Service',
-      badge: 'Data Engineering & APIs',
-      img: 'assets/images/project-fintech.jpg',
-      desc: 'High-throughput asynchronous Python pipeline continuously ingesting hourly meteorological observations across 15 European cities with automated statistical anomaly detection.',
-      architecture: 'Built using Python asyncio, SQLAlchemy ORM, and FastAPI with automated background scheduler jobs. Comprehensive automated unit and integration tests written in pytest.',
-      metrics: ['92% Test Coverage via pytest', 'Asynchronous non-blocking HTTP requests for 15 cities', 'Automated anomaly detection flagging temperature spikes', 'Zero-downtime REST query API'],
-      tags: ['Python', 'asyncio', 'FastAPI', 'SQLAlchemy', 'pytest', 'SQLite/PostgreSQL'],
+    'taskflow': {
+      title: 'TaskFlow: Full-Stack Project Management',
+      badge: 'Next.js & TypeScript',
+      img: 'assets/images/project-taskflow.jpg',
+      desc: 'A full-stack task management platform built with Next.js App Router, featuring drag-and-drop Kanban boards, role-based team workspaces, and typed Node.js/Express REST API.',
+      architecture: 'Developed with Next.js (App Router), TypeScript, and Tailwind CSS. Node.js/Express backend with Zod typed schema validation and PostgreSQL via Prisma ORM serving 15+ authenticated endpoints. React Query for server-state caching.',
+      metrics: [
+        'Interactive drag-and-drop Kanban workflows with optimistic UI updates',
+        '15+ typed REST endpoints with Zod request validation and JWT auth',
+        'React Query caching reducing redundant API queries by 60%',
+        'Automated CI/CD pipeline running ESLint, TypeScript check, and Jest tests'
+      ],
+      tags: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Prisma'],
       liveUrl: 'https://github.com/mrudul-999',
       codeUrl: 'https://github.com/mrudul-999',
     },
-    'devops-suite': {
-      title: 'KubeFlow - Kubernetes Cluster Management Console',
-      badge: 'DevOps & Infrastructure',
+    'ev-charging': {
+      title: 'EV Charging Market Intelligence Dashboard',
+      badge: 'Business Intelligence & Geospatial',
+      img: 'assets/images/project-ev-charging.jpg',
+      desc: 'An end-to-end European EV charging infrastructure intelligence platform processing 100K+ records with automated ETL pipelines and interactive geospatial Power BI dashboards.',
+      architecture: 'Collected and integrated 100K+ records across Europe using Python and SQL. Automated ETL pipelines reducing manual preparation by 80%. Designed Power BI dashboards visualizing charger density, regional adoption, and competitor share.',
+      metrics: [
+        '100,000+ public EV charging and demographic records processed',
+        '80% reduction in data prep time via automated Python ETL pipelines',
+        'Geospatial density and market expansion recommendation engine',
+        'Interactive Power BI KPI dashboards with regional drill-downs'
+      ],
+      tags: ['Python', 'Django', 'Power BI', 'SQL', 'ETL', 'Geospatial Analytics'],
+      liveUrl: 'https://github.com/mrudul-999',
+      codeUrl: 'https://github.com/mrudul-999',
+    },
+    'data-analytics': {
+      title: 'Data Analytics & Experimentation Dashboard',
+      badge: 'Databricks & A/B Testing',
+      img: 'assets/images/project-data-analytics.jpg',
+      desc: 'End-to-end data analytics and experimentation platform in Databricks and Python processing 100K+ records, evaluating A/B tests with statistical confidence intervals.',
+      architecture: 'Python and SQL analytics pipeline in Databricks processing 100K+ records. Designed A/B testing experiment evaluation defining success metrics, confidence intervals, and lift curves. Built Power BI dashboards with automated KPI tracking.',
+      metrics: [
+        'Processed 100K+ records with exploratory analysis and insight extraction',
+        '40% reduction in manual reporting effort with automated KPI tracking',
+        'Rigorous A/B testing experiment evaluation with statistical significance',
+        'Integrated structured data sources across Excel and Python workflows'
+      ],
+      tags: ['Python', 'SQL', 'Power BI', 'Databricks', 'A/B Testing', 'Excel'],
+      liveUrl: 'https://github.com/mrudul-999',
+      codeUrl: 'https://github.com/mrudul-999',
+    },
+    'clash-rc': {
+      title: 'Clash RC ’19 Quiz Web Application',
+      badge: 'Full Stack & Django',
       img: 'assets/images/project-devops.jpg',
-      desc: 'A centralized multi-tenant Kubernetes management panel with real-time pod orchestration, automated canary deployments, rolling configuration rollbacks, and interactive log streaming.',
-      architecture: 'Direct integration with Kubernetes API via custom operator in Go. The web client utilizes lightweight WebSockets for interactive remote terminal access and instantaneous pod health diagnostics.',
-      metrics: ['195 Running Pods Orchestrated', 'Instantaneous Canary Rollback in <2s', 'Integrated RBAC access control', 'Multi-cluster federation support'],
-      tags: ['Kubernetes', 'Go', 'Docker', 'React', 'Linux CLI', 'CI/CD Pipelines'],
+      desc: 'A high-concurrency locally hosted quiz web application developed for a premier large-scale college technical festival event.',
+      architecture: 'Engineered backend using Django MVT architecture, implementing URL routing, SQLite integration, session management, and core application logic with comprehensive integration testing.',
+      metrics: [
+        'Engineered for live competition concurrency during college tech fest',
+        'Django MVT backend architecture with SQLite integration',
+        'Seamless integration between responsive frontend and backend logic',
+        'End-to-end integration testing and session management'
+      ],
+      tags: ['Python', 'Django', 'SQLite', 'Web Application', 'Architecture'],
       liveUrl: 'https://github.com/mrudul-999',
       codeUrl: 'https://github.com/mrudul-999',
     },

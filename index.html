@@ -493,35 +493,36 @@
         <!-- Project Filters -->
         <div class="projects-filter">
           <button class="tab-btn active" data-filter="all">All Projects</button>
-          <button class="tab-btn" data-filter="ai">AI & Workflow</button>
-          <button class="tab-btn" data-filter="cloud">Cloud & Telemetry</button>
-          <button class="tab-btn" data-filter="fintech">FinTech & Apps</button>
-          <button class="tab-btn" data-filter="devops">DevOps & K8s</button>
+          <button class="tab-btn" data-filter="ai">Agentic AI & RAG</button>
+          <button class="tab-btn" data-filter="ml">Machine Learning</button>
+          <button class="tab-btn" data-filter="data">Data Pipelines</button>
+          <button class="tab-btn" data-filter="web">Full Stack Web</button>
         </div>
 
         <div class="projects-grid">
-          <!-- Project 1: AuraFlow AI -->
+          <!-- Project 1: Advanced RAG -->
           <article class="project-card" data-category="ai">
             <div class="project-thumb">
-              <img src="assets/images/project-ai-workspace.jpg" alt="AuraFlow - Autonomous Multi-Agent AI Workflow Canvas" loading="lazy">
-              <span class="project-badge">AI Platform</span>
+              <img src="assets/images/project-rag.jpg" alt="Production Grade Advanced RAG System" loading="lazy">
+              <span class="project-badge">Agentic RAG</span>
             </div>
             <div class="project-body">
               <h3 class="project-title">
-                <span>AuraFlow: Multi-Agent AI Canvas</span>
+                <span>Production Grade Advanced RAG</span>
               </h3>
               <p class="project-desc">
-                An interactive node-based visual workflow automation suite integrating LLM agents, semantic document search, and webhook triggers with sub-second execution speeds.
+                Agentic RAG architecture featuring an LLM query router, query transformation & fusion, and Cross-Encoder (ms-marco-MiniLM) reranking post-processing to minimize hallucinations.
               </p>
               <div class="project-tags">
-                <span class="tech-tag">React Flow</span>
-                <span class="tech-tag">FastAPI</span>
                 <span class="tech-tag">Python</span>
-                <span class="tech-tag">Vector DB</span>
-                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">FAISS</span>
+                <span class="tech-tag">Cross-Encoder</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Gradio</span>
               </div>
               <div class="project-footer">
-                <button class="btn btn-outline-glow btn-sm" data-project-target="ai-workspace">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="rag-system">
                   <span>View Case Study</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -529,12 +530,12 @@
                   </svg>
                 </button>
                 <div class="project-links">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                  <a href="https://github.com/mrudul-999" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                   </a>
-                  <a href="#" data-project-target="ai-workspace" class="icon-btn" aria-label="Live Demo">
+                  <a href="#" data-project-target="rag-system" class="icon-btn" aria-label="Live Demo">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       <polyline points="15 3 21 3 21 9"></polyline>
@@ -546,28 +547,29 @@
             </div>
           </article>
 
-          <!-- Project 2: Aurora Cloud Telemetry -->
-          <article class="project-card" data-category="cloud">
+          <!-- Project 2: Synapse Multi-Agentic AI -->
+          <article class="project-card" data-category="ai">
             <div class="project-thumb">
-              <img src="assets/images/project-cloud.jpg" alt="Aurora - Cloud Infrastructure Telemetry Dashboard" loading="lazy">
-              <span class="project-badge">Cloud Systems</span>
+              <img src="assets/images/project-synapse.jpg" alt="Synapse Multi-Agentic AI System" loading="lazy">
+              <span class="project-badge">LangGraph & MCP</span>
             </div>
             <div class="project-body">
               <h3 class="project-title">
-                <span>Aurora: Cloud Telemetry Suite</span>
+                <span>Synapse: Multi-Agentic AI</span>
               </h3>
               <p class="project-desc">
-                High-throughput distributed monitoring dashboard tracking server metrics, container health, query performance, and active incident mitigation across multi-region clusters.
+                Hierarchical multi-agent research system with LangGraph state machines, steelman vs. skeptic debate verification loop, and Model Context Protocol (MCP) tool integration.
               </p>
               <div class="project-tags">
-                <span class="tech-tag">Go</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Prometheus</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">gRPC</span>
+                <span class="tech-tag">LangGraph</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">MCP</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">HTMX</span>
+                <span class="tech-tag">Gemini API</span>
               </div>
               <div class="project-footer">
-                <button class="btn btn-outline-glow btn-sm" data-project-target="cloud-telemetry">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="synapse-ai">
                   <span>View Case Study</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -575,12 +577,12 @@
                   </svg>
                 </button>
                 <div class="project-links">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                  <a href="https://github.com/mrudul-999" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                   </a>
-                  <a href="#" data-project-target="cloud-telemetry" class="icon-btn" aria-label="Live Demo">
+                  <a href="#" data-project-target="synapse-ai" class="icon-btn" aria-label="Live Demo">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       <polyline points="15 3 21 3 21 9"></polyline>
@@ -592,28 +594,215 @@
             </div>
           </article>
 
-          <!-- Project 3: Astra FinTech Platform -->
-          <article class="project-card" data-category="fintech">
+          <!-- Project 3: Predictive Maintenance ML Pipeline -->
+          <article class="project-card" data-category="ml">
             <div class="project-thumb">
-              <img src="assets/images/project-fintech.jpg" alt="Astra - Real-Time Financial Analytics & Portfolio Analyzer" loading="lazy">
-              <span class="project-badge">FinTech & WebApp</span>
+              <img src="assets/images/project-predictive-ml.jpg" alt="Predictive Maintenance ML Pipeline" loading="lazy">
+              <span class="project-badge">ML & RUL Pipeline</span>
             </div>
             <div class="project-body">
               <h3 class="project-title">
-                <span>Astra: Algorithmic Asset Engine</span>
+                <span>Predictive Maintenance ML Pipeline</span>
               </h3>
               <p class="project-desc">
-                High-frequency portfolio analyzer offering asset allocation breakdowns, real-time WebSocket market streams, and client-side zero-latency financial simulations.
+                NASA CMAPSS turbofan engine Remaining Useful Life (RUL) estimation with 15+ rolling temporal features, Random Forest, XGBoost, and PyTorch LSTM tracked via MLflow.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PyTorch LSTM</span>
+                <span class="tech-tag">XGBoost</span>
+                <span class="tech-tag">MLflow</span>
+                <span class="tech-tag">FastAPI</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="predictive-ml">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/mrudul-999/PredictiveMLPipeline" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/mrudul-999/PredictiveMLPipeline" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Live Demo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: AI Interview Coach -->
+          <article class="project-card" data-category="ai">
+            <div class="project-thumb">
+              <img src="assets/images/project-interview.jpg" alt="AI Technical Interview Coach" loading="lazy">
+              <span class="project-badge">Full Stack & LLM</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <span>AI Interview Coach</span>
+              </h3>
+              <p class="project-desc">
+                Containerized full-stack application with Django, PostgreSQL, and Docker Compose, featuring dynamic interview prompts, prompt orchestration, and an HTMX reactive SPA.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">HTMX</span>
+                <span class="tech-tag">Gemini API</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="ai-interview">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/mrudul-999/AI-Interview-Coach" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/mrudul-999/AI-Interview-Coach" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Live Demo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Real-Time Job Market Pipeline -->
+          <article class="project-card" data-category="data">
+            <div class="project-thumb">
+              <img src="assets/images/project-jobpulse.jpg" alt="Real-Time Job Market Intelligence Pipeline" loading="lazy">
+              <span class="project-badge">Data Engineering</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <span>Job Market Intelligence Pipeline</span>
+              </h3>
+              <p class="project-desc">
+                Continuous Python ingestion from ArbeitNow API, skill normalization against tech checklists, PostgreSQL JSONB raw archival, and indexed FastAPI query service.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">SQLAlchemy</span>
+                <span class="tech-tag">ETL</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="job-pulse">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/mrudul-999/JobPulse-Real-Time-Job-Market-Intelligence-Pipeline" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/mrudul-999/JobPulse-Real-Time-Job-Market-Intelligence-Pipeline" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="Live Demo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Indian Sign Language Recognition -->
+          <article class="project-card" data-category="ml">
+            <div class="project-thumb">
+              <img src="assets/images/project-sign-language.jpg" alt="Indian Sign Language Recognition System" loading="lazy">
+              <span class="project-badge">Computer Vision</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <span>Indian Sign Language Recognition</span>
+              </h3>
+              <p class="project-desc">
+                CNN gesture classification on custom 35-class dataset achieving 97% accuracy, extending static hand recognition into continuous real-time sentence translation via Flask & OpenCV.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow/Keras</span>
+                <span class="tech-tag">CNN</span>
+                <span class="tech-tag">OpenCV</span>
+                <span class="tech-tag">Flask</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="sign-language">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/mrudul-999" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="#" data-project-target="sign-language" class="icon-btn" aria-label="Live Demo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: TaskFlow Project Management -->
+          <article class="project-card" data-category="web">
+            <div class="project-thumb">
+              <img src="assets/images/project-taskflow.jpg" alt="TaskFlow Project Management Platform" loading="lazy">
+              <span class="project-badge">Next.js & PostgreSQL</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <span>TaskFlow: Full-Stack Kanban</span>
+              </h3>
+              <p class="project-desc">
+                Full-stack task management platform with Next.js App Router, drag-and-drop Kanban boards, role-based team workspaces, and Node.js REST API with Prisma ORM.
               </p>
               <div class="project-tags">
                 <span class="tech-tag">Next.js</span>
                 <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Rust Wasm</span>
-                <span class="tech-tag">WebSockets</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Prisma</span>
                 <span class="tech-tag">Tailwind</span>
               </div>
               <div class="project-footer">
-                <button class="btn btn-outline-glow btn-sm" data-project-target="fintech-platform">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="taskflow">
                   <span>View Case Study</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -621,12 +810,12 @@
                   </svg>
                 </button>
                 <div class="project-links">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                  <a href="https://github.com/mrudul-999" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                   </a>
-                  <a href="#" data-project-target="fintech-platform" class="icon-btn" aria-label="Live Demo">
+                  <a href="#" data-project-target="taskflow" class="icon-btn" aria-label="Live Demo">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       <polyline points="15 3 21 3 21 9"></polyline>
@@ -638,28 +827,29 @@
             </div>
           </article>
 
-          <!-- Project 4: KubeFlow DevOps Console -->
-          <article class="project-card" data-category="devops">
+          <!-- Project 8: EV Charging Market Intelligence -->
+          <article class="project-card" data-category="data">
             <div class="project-thumb">
-              <img src="assets/images/project-devops.jpg" alt="KubeFlow - Kubernetes Cluster Management Console" loading="lazy">
-              <span class="project-badge">DevOps & Infra</span>
+              <img src="assets/images/project-ev-charging.jpg" alt="EV Charging Market Intelligence Dashboard" loading="lazy">
+              <span class="project-badge">Geospatial & BI</span>
             </div>
             <div class="project-body">
               <h3 class="project-title">
-                <span>KubeFlow: Multi-Cluster Console</span>
+                <span>EV Charging Intelligence</span>
               </h3>
               <p class="project-desc">
-                Multi-tenant Kubernetes operator dashboard managing pod orchestration, rolling canary updates, automated configuration rollbacks, and interactive log streaming.
+                ETL data pipeline and geospatial Power BI dashboard integrating 100K+ records across Europe to analyze charging density, adoption, and station expansion.
               </p>
               <div class="project-tags">
-                <span class="tech-tag">Kubernetes</span>
-                <span class="tech-tag">Go Operator</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">WebSockets</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">ETL</span>
+                <span class="tech-tag">Geospatial</span>
               </div>
               <div class="project-footer">
-                <button class="btn btn-outline-glow btn-sm" data-project-target="devops-suite">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="ev-charging">
                   <span>View Case Study</span>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -667,12 +857,103 @@
                   </svg>
                 </button>
                 <div class="project-links">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                  <a href="https://github.com/mrudul-999" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                   </a>
-                  <a href="#" data-project-target="devops-suite" class="icon-btn" aria-label="Live Demo">
+                  <a href="#" data-project-target="ev-charging" class="icon-btn" aria-label="Live Demo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 9: Data Analytics & Experimentation -->
+          <article class="project-card" data-category="data">
+            <div class="project-thumb">
+              <img src="assets/images/project-data-analytics.jpg" alt="Data Analytics and Experimentation Dashboard" loading="lazy">
+              <span class="project-badge">Databricks & A/B</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <span>Data Analytics & Experiments</span>
+              </h3>
+              <p class="project-desc">
+                Databricks and Power BI analytics dashboard processing 100K+ records, evaluating A/B testing statistical significance, and tracking automated KPI metrics.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Databricks</span>
+                <span class="tech-tag">A/B Testing</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="data-analytics">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/mrudul-999" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="#" data-project-target="data-analytics" class="icon-btn" aria-label="Live Demo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 10: Clash RC '19 Quiz App -->
+          <article class="project-card" data-category="web">
+            <div class="project-thumb">
+              <img src="assets/images/project-devops.jpg" alt="Clash RC Quiz Web Application" loading="lazy">
+              <span class="project-badge">Django Web App</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <span>Clash RC Quiz Application</span>
+              </h3>
+              <p class="project-desc">
+                Locally hosted competition quiz web app for large-scale college festival built with Django MVT architecture, session handling, SQLite, and custom routing.
+              </p>
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Integration Testing</span>
+              </div>
+              <div class="project-footer">
+                <button class="btn btn-outline-glow btn-sm" data-project-target="clash-rc">
+                  <span>View Case Study</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+                <div class="project-links">
+                  <a href="https://github.com/mrudul-999" target="_blank" rel="noopener noreferrer" class="icon-btn" aria-label="GitHub Repository">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                  <a href="#" data-project-target="clash-rc" class="icon-btn" aria-label="Live Demo">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                       <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                       <polyline points="15 3 21 3 21 9"></polyline>
